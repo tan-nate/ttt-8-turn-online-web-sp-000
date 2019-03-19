@@ -39,6 +39,7 @@ def turn(board)
   until valid_move?(board, index)
     puts "Invalid input. Please enter 1-9:"
     input = gets.chomp
+    index = input_to_index(input)
   end
   move(board, index, value = "X")
   display_board(board)
