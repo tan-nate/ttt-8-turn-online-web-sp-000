@@ -33,13 +33,15 @@ def move(board, index, value = "X")
 end
 
 def turn(board)
+  puts "Please enter 1-9:"
   loop do
-    puts "Please enter 1-9:"
     input = gets.chomp
     index = input_to_index(input)
     if valid_move?(board, index)
       move(board, index, value = "X")
+      puts "Please enter 1-9:"
     else
       puts "Invalid input. Please enter 1-9:"
     end
+  end
 end
